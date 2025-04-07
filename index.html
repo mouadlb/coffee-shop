@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Brewed Bliss Café</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-gray-900 min-h-screen">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg border-b border-gray-200 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-semibold tracking-tight">
+                        Brewed<span class="text-amber-700">Bliss</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-8">
+                        <a href="#about" class="text-gray-700 hover:text-amber-700 transition-colors duration-200">About</a>
+                        <a href="#specialty" class="text-gray-700 hover:text-amber-700 transition-colors duration-200">Specialty</a>
+                        <a href="menu.html" class="text-gray-700 hover:text-amber-700 transition-colors duration-200">Menu</a>
+                        <a href="#contact" class="text-gray-700 hover:text-amber-700 transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-amber-700 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-700 hover:bg-gray-50 rounded-md">About</a>
+                <a href="#specialty" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-700 hover:bg-gray-50 rounded-md">Specialty</a>
+                <a href="menu.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-700 hover:bg-gray-50 rounded-md">Menu</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-700 hover:bg-gray-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 md:pt-36 overflow-hidden">
+        <div class="hero-pattern absolute inset-0 z-0 opacity-5"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+                        Experience the perfect <span class="text-amber-700 relative">
+                            brew
+                            <svg class="absolute -bottom-2 left-0 w-full" width="100%" height="6" viewBox="0 0 80 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 5C20 -0.5 60 -0.5 79 5" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span> every time
+                    </h1>
+                    <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+                        Freshly opened in the heart of the city, our café offers handcrafted coffee, artisanal pastries, and a welcoming atmosphere where everyone feels at home.
+                    </p>
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <a href="menu.html" class="px-6 py-3 rounded-md bg-amber-700 text-white font-medium shadow-sm hover:bg-amber-800 transition-colors duration-200">
+                            Explore Menu
+                        </a>
+                        <a href="#about" class="px-6 py-3 rounded-md border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors duration-200">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <div class="relative">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-amber-200 to-amber-600 rounded-2xl blur opacity-20"></div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                            <img 
+                                src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
+                                alt="Brewed Bliss Café" 
+                                class="w-full h-auto object-cover aspect-[4/3]"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-28 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Founded with a passion for exceptional coffee and genuine hospitality, Brewed Bliss Café aims to create a space where community thrives over quality brews and delicious treats.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
+                <div class="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-amber-100 text-amber-700 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" y1="2" x2="6" y2="4"></line><line x1="10" y1="2" x2="10" y2="4"></line><line x1="14" y1="2" x2="14" y2="4"></line></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Ethically Sourced</h3>
+                    <p class="text-gray-600">Our beans are responsibly sourced from sustainable farms around the world, ensuring fair treatment of farmers and the environment.</p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-amber-100 text-amber-700 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Freshly Prepared</h3>
+                    <p class="text-gray-600">Every cup is crafted with precision using freshly roasted beans, ground moments before brewing for maximum flavor and aroma.</p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-amber-100 text-amber-700 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Community Focused</h3>
+                    <p class="text-gray-600">We're more than just a café—we're a gathering place for neighbors, friends, and coffee enthusiasts to connect and thrive together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialty Section -->
+    <section id="specialty" class="py-20 md:py-28">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Specialty</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    From our signature coffee blends to our house-made pastries, we take pride in offering quality that you can taste in every bite and sip.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+                <div class="relative">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-200 to-amber-600 rounded-2xl blur opacity-20"></div>
+                    <div class="relative h-full rounded-2xl overflow-hidden shadow-xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1334&q=80" 
+                            alt="Specialty Coffee" 
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-4">Craft Coffee Excellence</h3>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">House Blend</h4>
+                                <p class="text-gray-600">Our signature medium roast combines beans from Ethiopia and Colombia for a balanced, smooth flavor with notes of chocolate and berries.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9V5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v4"></path><path d="M2 13h20"></path><path d="M3 17h18"></path><path d="M4 21h16"></path><path d="M4 13v8"></path><path d="M20 13v8"></path><path d="M8 5v8"></path><path d="M16 5v8"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Cold Brew</h4>
+                                <p class="text-gray-600">Steeped for 18 hours, our cold brew delivers a remarkably smooth, low-acid coffee experience with subtle caramel undertones.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Specialty Lattes</h4>
+                                <p class="text-gray-600">Expertly crafted with house-made syrups and perfectly steamed milk, our signature lattes offer a unique twist on classic favorites.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="menu.html" class="mt-8 inline-flex items-center text-amber-700 font-medium hover:text-amber-800 transition-colors duration-200">
+                        View our full menu
+                        <svg class="ml-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 md:py-28 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">What Our Customers Say</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    We're proud of the experience we provide, and our customers agree.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center space-x-1 mb-4 text-amber-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <p class="text-gray-600 mb-6 font-geist-mono">"The best coffee I've had in the city! The atmosphere is welcoming, and the staff is incredibly friendly. This is my new favorite spot for both work and relaxation."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 overflow-hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="text-sm font-semibold">Emily Johnson</h4>
+                            <p class="text-xs text-gray-500">Local Resident</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center space-x-1 mb-4 text-amber-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <p class="text-gray-600 mb-6 font-geist-mono">"Their pastries are to die for! I've tried the almond croissant and chocolate tart, and both were exceptional. Paired with their house blend coffee, it's a perfect breakfast."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 overflow-hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="text-sm font-semibold">Michael Chen</h4>
+                            <p class="text-xs text-gray-500">Food Blogger</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center space-x-1 mb-4 text-amber-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="opacity-40"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <p class="text-gray-600 mb-6 font-geist-mono">"As someone who works remotely, I appreciate the comfortable seating and reliable WiFi. It's the perfect environment to get work done while enjoying quality coffee."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 overflow-hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="text-sm font-semibold">Sarah Williams</h4>
+                            <p class="text-xs text-gray-500">Freelance Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-28">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Visit Us</h2>
+                        <p class="text-gray-600 mb-8">
+                            We'd love to see you! Stop by for a cup of coffee and experience the warm atmosphere of Brewed Bliss Café.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Address</h4>
+                                    <p class="text-gray-600">9 Rue al maaboud<br>Rabat , Morocco</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Hours</h4>
+                                    <p class="text-gray-600">lundi - vendredi: 7h - 19h<br>Samedi: 9h - 16h<br>Dimanche : Fermé</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Contact</h4>
+                                    <p class="text-gray-600">tel: 06 xx xx xx xx<br>Email: mouadinho@Ex.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 flex space-x-4">
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-amber-100 hover:text-amber-700 transition-colors duration-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-amber-100 hover:text-amber-700 transition-colors duration-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-amber-100 hover:text-amber-700 transition-colors duration-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7-1.2-2.7-1.8a9.9 9.9 0 0 0-2.9-.3H6.6c-1 .1-1.9.3-2.9.3C1.7 2.8 1 4 1 4s-.7 1.8-.7 3.8v1.8c0 2 .7 3.8.7 3.8s.7 1.2 2.7 1.8c1 .3 2.2.5 2.9.5h9.6c.7 0 1.9-.2 2.9-.5 2-.6 2.7-1.8 2.7-1.8s.7-1.8.7-3.8v-1.8c0-2-.7-3.8-.7-3.8Z"></path><path d="m10 14 5-2.5-5-2.5z"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="relative h-full rounded-2xl overflow-hidden shadow-xl">
+                            <img 
+                                src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1341&q=80" 
+                                alt="Cafe interior" 
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="md:col-span-2">
+                    <a href="#" class="text-xl font-semibold tracking-tight">
+                        Brewed<span class="text-amber-500">Bliss</span>
+                    </a>
+                    <p class="mt-4 text-gray-400">
+                        A place where great coffee meets warm hospitality. We're dedicated to creating a welcoming space for our community to gather, connect, and enjoy exceptional coffee.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-amber-500 transition-colors duration-200">About Us</a></li>
+                        <li><a href="#specialty" class="text-gray-400 hover:text-amber-500 transition-colors duration-200">Our Specialty</a></li>
+                        <li><a href="menu.html" class="text-gray-400 hover:text-amber-500 transition-colors duration-200">Menu</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-amber-500 transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe for updates on new menu items, events, and exclusive offers.</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="w-full px-3 py-2 text-sm text-gray-900 bg-white border-0 rounded-l-md focus:outline-none focus:ring-1 focus:ring-amber-500">
+                            <button type="submit" class="px-3 py-2 text-sm font-medium text-white bg-amber-700 rounded-r-md hover:bg-amber-800 focus:outline-none focus:ring-1 focus:ring-amber-500">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-10 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2025 Brewed Bliss Café. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener("wheel", (e)=> {
+            const isPinching = e.ctrlKey
+            if(isPinching) e.preventDefault()
+        }, { passive: false })
+    </script>
+</body>
+</html>

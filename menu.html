@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Menu - Brewed Bliss Café</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-gray-900 min-h-screen">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg border-b border-gray-200 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-semibold tracking-tight">
+                        Brewed<span class="text-amber-700">Bliss</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-8">
+                        <a href="index.html#about" class="text-gray-700 hover:text-amber-700 transition-colors duration-200">About</a>
+                        <a href="index.html#specialty" class="text-gray-700 hover:text-amber-700 transition-colors duration-200">Specialty</a>
+                        <a href="menu.html" class="text-amber-700 font-medium transition-colors duration-200">Menu</a>
+                        <a href="index.html#contact" class="text-gray-700 hover:text-amber-700 transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-amber-700 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-700 hover:bg-gray-50 rounded-md">About</a>
+                <a href="index.html#specialty" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-700 hover:bg-gray-50 rounded-md">Specialty</a>
+                <a href="menu.html" class="block px-3 py-2 text-base font-medium text-amber-700 bg-gray-50 rounded-md">Menu</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-700 hover:bg-gray-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-16 bg-amber-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Menu</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                We take pride in offering a carefully curated selection of coffee, beverages, and freshly made food items.
+            </p>
+        </div>
+    </section>
+
+    <!-- Menu Categories Navigation -->
+    <section class="py-6 border-b border-gray-200 sticky top-16 bg-white z-40">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex overflow-x-auto hide-scrollbar space-x-6 py-2">
+                <a href="#coffee" class="text-gray-700 hover:text-amber-700 whitespace-nowrap text-sm font-medium transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100">Coffee</a>
+                <a href="#tea" class="text-gray-700 hover:text-amber-700 whitespace-nowrap text-sm font-medium transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100">Tea & Alternatives</a>
+                <a href="#pastries" class="text-gray-700 hover:text-amber-700 whitespace-nowrap text-sm font-medium transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100">Pastries</a>
+                <a href="#breakfast" class="text-gray-700 hover:text-amber-700 whitespace-nowrap text-sm font-medium transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100">Breakfast</a>
+                <a href="#lunch" class="text-gray-700 hover:text-amber-700 whitespace-nowrap text-sm font-medium transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100">Lunch</a>
+                <a href="#desserts" class="text-gray-700 hover:text-amber-700 whitespace-nowrap text-sm font-medium transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100">Desserts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Content -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Coffee Section -->
+            <div id="coffee" class="mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold">Coffee</h2>
+                    <div class="flex-1 h-px bg-gray-200"></div>
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" y1="2" x2="6" y2="4"></line><line x1="10" y1="2" x2="10" y2="4"></line><line x1="14" y1="2" x2="14" y2="4"></line></svg>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Espresso</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">A concentrated shot of coffee served in a demitasse cup</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Single / Double</span>
+                            <span class="font-medium">$2.95 / $3.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Americano</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Espresso diluted with hot water</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Small / Medium / Large</span>
+                            <span class="font-medium">$3.95 / $4.50 / $4.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="font-semibold text-xl">Cappuccino</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">Popular</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Equal parts espresso, steamed milk, and milk foam</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Small / Medium / Large</span>
+                            <span class="font-medium">$4.50 / $5.25 / $5.75</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Latte</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Espresso with steamed milk and a light layer of foam</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Small / Medium / Large</span>
+                            <span class="font-medium">$4.75 / $5.50 / $6.00</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Mocha</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Espresso with chocolate, steamed milk and whipped cream</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Small / Medium / Large</span>
+                            <span class="font-medium">$5.25 / $5.75 / $6.25</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="font-semibold text-xl">Cold Brew</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">House Specialty</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Slow-steeped coffee served over ice</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Small / Medium / Large</span>
+                            <span class="font-medium">$4.95 / $5.50 / $6.00</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Nitro Cold Brew</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Cold brew infused with nitrogen for a creamy texture</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Small / Medium</span>
+                            <span class="font-medium">$5.50 / $6.25</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Pour Over</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Hand-brewed coffee made to order (ask about our single-origin options)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">12 oz</span>
+                            <span class="font-medium">$5.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <div class="flex items-start gap-3">
+                        <div class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-base mb-1">Customize Your Coffee</h4>
+                            <p class="text-gray-600 text-sm">
+                                Add flavor (vanilla, caramel, hazelnut): $0.75<br>
+                                Alternative milks (oat, almond, soy): $0.75<br>
+                                Extra shot of espresso: $1.50
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tea & Alternatives Section -->
+            <div id="tea" class="mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold">Tea & Alternatives</h2>
+                    <div class="flex-1 h-px bg-gray-200"></div>
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v9a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V7z"></path><path d="M17 7a3 3 0 0 0 0-6H7a3 3 0 0 0 0 6"></path></svg>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Loose Leaf Tea</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Choose from our selection: Earl Grey, English Breakfast, Chamomile, Green, Peppermint</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per pot</span>
+                            <span class="font-medium">$4.25</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Chai Latte</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Spiced tea concentrate with steamed milk</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Small / Medium / Large</span>
+                            <span class="font-medium">$4.75 / $5.25 / $5.75</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">London Fog</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Earl Grey tea with vanilla and steamed milk</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Small / Medium / Large</span>
+                            <span class="font-medium">$4.75 / $5.25 / $5.75</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="font-semibold text-xl">Matcha Latte</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">Popular</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Premium Japanese matcha whisked with steamed milk</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Small / Medium / Large</span>
+                            <span class="font-medium">$5.25 / $5.75 / $6.25</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Hot Chocolate</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Rich chocolate with steamed milk and whipped cream</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Small / Medium / Large</span>
+                            <span class="font-medium">$4.50 / $5.00 / $5.50</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Iced Tea</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">House-brewed black or herbal tea over ice</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Small / Medium / Large</span>
+                            <span class="font-medium">$3.75 / $4.25 / $4.75</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pastries Section -->
+            <div id="pastries" class="mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold">Pastries</h2>
+                    <div class="flex-1 h-px bg-gray-200"></div>
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3"></path><path d="M21 12v7a2 2 0 0 1-2 2h-7"></path><path d="M3 12v7a2 2 0 0 0 2 2h7"></path><path d="M12 3h7a2 2 0 0 1 2 2v7"></path><path d="M3 8a2 2 0 0 0 2-2V3"></path><path d="M8 21a2 2 0 0 0 2-2v-3"></path><path d="M16 3v3a2 2 0 0 0 2 2h3"></path><path d="M16 21v-3a2 2 0 0 1 2-2h3"></path></svg>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="font-semibold text-xl">Butter Croissant</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">Fresh Daily</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Flaky, buttery layers baked to golden perfection</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per piece</span>
+                            <span class="font-medium">$3.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Almond Croissant</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Buttery croissant filled with almond cream and topped with sliced almonds</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per piece</span>
+                            <span class="font-medium">$4.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Pain au Chocolat</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Chocolate-filled croissant pastry</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per piece</span>
+                            <span class="font-medium">$4.50</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Cinnamon Roll</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Soft roll with cinnamon filling and cream cheese frosting</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per piece</span>
+                            <span class="font-medium">$4.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="font-semibold text-xl">Blueberry Muffin</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">Popular</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Moist muffin packed with fresh blueberries and topped with streusel</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per piece</span>
+                            <span class="font-medium">$3.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Morning Bun</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Croissant dough rolled with cinnamon sugar</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per piece</span>
+                            <span class="font-medium">$4.25</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Scone</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Rotating flavors - ask about today's selection</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per piece</span>
+                            <span class="font-medium">$3.75</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Banana Bread</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Moist banana bread with walnuts</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Slice / Loaf</span>
+                            <span class="font-medium">$3.75 / $18.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Bagel with Cream Cheese</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Plain, sesame or everything bagel with house cream cheese</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per bagel</span>
+                            <span class="font-medium">$4.25</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Breakfast Section -->
+            <div id="breakfast" class="mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold">Breakfast</h2>
+                    <div class="flex-1 h-px bg-gray-200"></div>
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V2"></path><path d="M2 18h20"></path><path d="M2 22h20"></path><path d="M5 11v7"></path><path d="M19 11v7"></path></svg>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="font-semibold text-xl">Avocado Toast</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">House Favorite</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Smashed avocado on sourdough with microgreens, cherry tomatoes, and olive oil</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">
+                                Add poached egg: +$2.00
+                            </span>
+                            <span class="font-medium">$9.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Breakfast Sandwich</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Fried egg, cheddar, bacon or sausage on a toasted English muffin</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Served all day</span>
+                            <span class="font-medium">$8.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Granola Bowl</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">House-made granola with Greek yogurt, seasonal fruit, and honey</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700"></span>
+                            <span class="font-medium">$8.50</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Quiche</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Daily selection with side salad</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Check for today's flavor</span>
+                            <span class="font-medium">$10.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Breakfast Burrito</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Scrambled eggs, potatoes, black beans, cheese, and salsa in a flour tortilla</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">With choice of protein</span>
+                            <span class="font-medium">$11.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Oatmeal</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Steel-cut oats with brown sugar, cinnamon, and choice of toppings</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Toppings: fruit, nuts, seeds</span>
+                            <span class="font-medium">$6.95</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lunch Section -->
+            <div id="lunch" class="mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold">Lunch</h2>
+                    <div class="flex-1 h-px bg-gray-200"></div>
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V2"></path><path d="M3 13v5c0 1.1.9 2 2 2h4"></path><path d="M3 21h18"></path><path d="M7 17v-4"></path><path d="M14 13v8"></path><path d="M18 13v8"></path></svg>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Chicken Pesto Panini</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Grilled chicken, pesto, mozzarella, and roasted red peppers on sourdough</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Served with side salad</span>
+                            <span class="font-medium">$12.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="font-semibold text-xl">Mediterranean Salad</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">Healthy Choice</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Mixed greens, cucumber, cherry tomatoes, feta, olives, and lemon vinaigrette</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Add chicken: +$4.00</span>
+                            <span class="font-medium">$11.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Caprese Sandwich</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Fresh mozzarella, tomato, basil, and balsamic glaze on ciabatta</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Served with side salad</span>
+                            <span class="font-medium">$10.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Turkey & Avocado Wrap</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Roasted turkey, avocado, mixed greens, tomato, and aioli in a spinach wrap</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Served with side salad</span>
+                            <span class="font-medium">$12.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Soup of the Day</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Rotating selection - ask about today's soup</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Cup / Bowl</span>
+                            <span class="font-medium">$5.95 / $7.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="font-semibold text-xl">Harvest Bowl</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">New Item</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Quinoa, roasted sweet potatoes, kale, chickpeas, and tahini dressing</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Add chicken: +$4.00</span>
+                            <span class="font-medium">$13.95</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts Section -->
+            <div id="desserts" class="mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold">Desserts</h2>
+                    <div class="flex-1 h-px bg-gray-200"></div>
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.21 13.89 7 23l4-4 4 4-.84-7.11"></path><path d="m15 2-5 9h9l-9 9 5-9H6l9-9Z"></path></svg>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="font-semibold text-xl">Chocolate Chip Cookie</h3>
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">Best Seller</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Soft-baked with chunks of premium chocolate</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per cookie</span>
+                            <span class="font-medium">$3.50</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Brownie</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Rich, fudgy chocolate brownie</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per piece</span>
+                            <span class="font-medium">$3.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Lemon Tart</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Buttery crust filled with lemon curd</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Individual size</span>
+                            <span class="font-medium">$5.50</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Cheesecake</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">New York style with graham cracker crust</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Slice</span>
+                            <span class="font-medium">$5.95</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Chocolate Mousse</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Light and airy chocolate mousse in a jar</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">Per jar</span>
+                            <span class="font-medium">$6.50</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                        <h3 class="font-semibold text-xl mb-1">Seasonal Fruit Crisp</h3>
+                        <p class="text-gray-500 text-sm font-geist-mono mb-3">Warm fruit filling with oat crumble topping</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-700">
+                                Add ice cream: +$2.00
+                            </span>
+                            <span class="font-medium">$7.50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Return to Home -->
+            <div class="mt-12 text-center">
+                <a href="index.html" class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-50 transition-colors duration-200">
+                    <svg class="mr-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                    Return to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="md:col-span-2">
+                    <a href="#" class="text-xl font-semibold tracking-tight">
+                        Brewed<span class="text-amber-500">Bliss</span>
+                    </a>
+                    <p class="mt-4 text-gray-400">
+                        A place where great coffee meets warm hospitality. We're dedicated to creating a welcoming space for our community to gather, connect, and enjoy exceptional coffee.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-amber-500 transition-colors duration-200">About Us</a></li>
+                        <li><a href="index.html#specialty" class="text-gray-400 hover:text-amber-500 transition-colors duration-200">Our Specialty</a></li>
+                        <li><a href="menu.html" class="text-gray-400 hover:text-amber-500 transition-colors duration-200">Menu</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-amber-500 transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe for updates on new menu items, events, and exclusive offers.</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="w-full px-3 py-2 text-sm text-gray-900 bg-white border-0 rounded-l-md focus:outline-none focus:ring-1 focus:ring-amber-500">
+                            <button type="submit" class="px-3 py-2 text-sm font-medium text-white bg-amber-700 rounded-r-md hover:bg-amber-800 focus:outline-none focus:ring-1 focus:ring-amber-500">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-10 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 Brewed Bliss Café. All rights reserved.
+                </p>
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">
+                    Built with <a href="https://flowith.net" target="_blank" class="text-amber-500 hover:underline">Flowith Oracle</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener("wheel", (e)=> {
+            const isPinching = e.ctrlKey
+            if(isPinching) e.preventDefault()
+        }, { passive: false })
+    </script>
+</body>
+</html>
